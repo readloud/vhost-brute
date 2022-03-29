@@ -6,11 +6,11 @@
  * You can do want you want with this program
  * - gwen -
  */
-
-function __autoload( $c ) {
+ 
+function PlatformAutoloader( $c ) {
 	include( __DIR__.'/'.$c.'.php' );
 }
-
+spl_autoload_register('PlatformAutoloader');
 
 // parse command line
 {
